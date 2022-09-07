@@ -75,7 +75,7 @@ selectizeGroupUI <- function(id, params, label = NULL, btn_label = "Reset filter
           tagSelect <- tags$div(
             id = ns(paste0("container-", input$inputId)),
             selectizeInput(
-              inputId = ns(gsub(" ", "_", input$inputId)),
+              inputId = ns(ws2underscore(input$inputId)),
               label = input$label %||% input$title,
               choices = input$choices,
               selected = input$selected,
